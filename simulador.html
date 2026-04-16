@@ -11,29 +11,29 @@
 </head>
  
 <body>
- 
     <div class="container">
-        <h1>Simulador de Crédito</h1>
+        <img src="dog_bank.png" alt="Logo de la empresa" class="logo">
+        <h1>SIMULADOR DE CREDITO</h1>
  
-        <h2>Datos financieros</h2>
-        <label for="txtIngresos">Ingresos:</label>
-        <input type="text" id="txtIngresos">
+        <h2>DATOS FINANCIEROS</h2>
+        <label for="txtIngresos"><span class="label-icon icon-ingresos"></span> Ingresos:</label>
+        <input type="text" id="txtIngresos" placeholder="Ejm. 1234">
  
-        <label for="txtEgresos">Egresos:</label>
-        <input type="text" id="txtEgresos">
+        <label for="txtEgresos"><span class="label-icon icon-egresos"></span> Egresos:</label>
+        <input type="text" id="txtEgresos" placeholder="Ejm. 1234">
  
         <p>Disponible: <span id="spnDisponible"></span></p>
         <p>Capacidad de pago mensual: <span id="spnCapacidadPago"></span></p>
  
-        <h2>Solicitud de crédito</h2>
-        <label for="txtMonto">Monto:</label>
-        <input type="text" id="txtMonto">
+        <h2>SOLICITUD DE CRÉDITO</h2>
+        <label for="txtMonto"><span class="label-icon icon-monto"></span> Monto:</label>
+        <input type="text" id="txtMonto" placeholder="Ejm. 1234">
  
-        <label for="txtPlazo">Plazo en años:</label>
-        <input type="text" id="txtPlazo">
+        <label for="txtPlazo"><span class="label-icon icon-plazo"></span> Plazo en años:</label>
+        <input type="text" id="txtPlazo" placeholder="Ejm. 5">
  
-        <label for="txtTasaInteres">Tasa de interés:</label>
-        <input type="text" id="txtTasaInteres">
+        <label for="txtTasaInteres"><span class="label-icon icon-tasa"></span> Tasa de interés:</label>
+        <input type="text" id="txtTasaInteres" placeholder="Ejm. 10">
  
         <p>Interés a pagar: <span id="spnInteresPagar"></span></p>
         <p>Total préstamo: <span id="spnTotalPrestamo"></span></p>
@@ -42,7 +42,7 @@
  
         <div class="buttons">
             <button id="btnCalcularCredito" onclick="calcular()">Calcular Crédito</button>
-            <button id="btnReiniciar">Reiniciar</button>
+            <button id="btnReiniciar" onclick="reiniciar()">Reiniciar</button>
         </div>
     </div>
  

@@ -34,3 +34,18 @@ function calcular() {
     let estadoCredito = aprobarCredito(capacidadPagoMensual, cuotaMensual);
     mostrarEnSpan("spnEstadoCredito", estadoCredito);
 }
+
+function reiniciar() {
+    document.getElementById("txtIngresos").value = "";
+    document.getElementById("txtEgresos").value = "";
+    document.getElementById("txtMonto").value = "";
+    document.getElementById("txtPlazo").value = "";
+    document.getElementById("txtTasaInteres").value = "";
+
+    mostrarEnSpan("spnDisponible", "0.00");
+    mostrarEnSpan("spnCapacidadPago", "0.00");
+    mostrarEnSpan("spnInteresPagar", "0.00");
+    mostrarEnSpan("spnTotalPrestamo", "0.00");
+    mostrarEnSpan("spnCuotaMensual", "0.00");
+    mostrarEnSpan("spnEstadoCredito", "ANALIZANDO...");
+}

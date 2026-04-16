@@ -55,4 +55,3 @@ function aprobarCredito(capacidadPago, cuotaMensual) {
     }
  
 }
-
