@@ -1,17 +1,36 @@
 //AQUI EL JAVASCRIPT PARA MANIPULAR EL HTML
- 
- // Paso 3 - Funcion Calcular
+
+//Paso 3 - Funcion calcular 
 function calcular() {
+    //Paso 3 - parseFloat 
     let ingresos = parseFloat(document.getElementById("txtIngresos").value);
     let egresos = parseFloat(document.getElementById("txtEgresos").value);
- 
+    
+    //Paso 3 - Mostar el valor en pantalla
     let disponible = calcularDisponible(ingresos, egresos);
-    const elemento = document.getElementById("spnDisponible");
-    elemento.innerText = disponible;
-    texto("spnDisponible", disponible);
+    mostrarEnSpan("spnDisponible", disponible.toFixed(2));
 
-    let capacidadPago = calcularCapacidadPago(disponible);
-    const elemento2 = document.getElementById("spnCapacidadPago");
-    elemento2.innerText = capacidadPago;
-    texto("spnCapacidadPago", capacidadPago);
+    //Paso 5 - Mostrar la capacidad de pago en pantalla
+    let capacidadPagoMensual = calcularCapacidadPago(disponible);
+    mostrarEnSpan("spnCapacidadPago", capacidadPagoMensual.toFixed(2));
+
+    //Paso 7 - Mostrar el resultado del credito en pantalla
+    let monto = mostrarEnTxt("txtMonto");
+    let plazo = mostrarEnTxt("txtPlazo");
+    let tasa = mostrarEnTxt("txtTasaInteres");
+
+    let interes = calcularInteresSimple(monto, tasa, plazo);
+    mostrarEnSpan("spnInteresPagar", interes.toFixed(2));
+
+    //Paso 9 - Mostrar el total a pagar en pantalla
+    let totalPagar = calcularTotalPagar(monto, interes);
+    mostrarEnSpan("spnTotalPrestamo", totalPagar.toFixed(2));
+
+    //Paso 11 - Mostrar cuota mensual en pantalla
+    let cuotaMensual = calcularCuotaMensual(totalPagar, plazo);
+    mostrarEnSpan("spnCuotaMensual", cuotaMensual.toFixed(2));
+
+    //Paso 13 - Mostrar el estado del credito en pantalla
+    let estadoCredito = aprobarCredito(capacidadPagoMensual, cuotaMensual);
+    mostrarEnSpan("spnEstadoCredito", estadoCredito);
 }
