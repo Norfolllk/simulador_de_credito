@@ -18,10 +18,10 @@
  
         <h2>DATOS FINANCIEROS</h2>
         <label for="txtIngresos"><span class="label-icon icon-ingresos"></span> Ingresos:</label>
-        <input type="text" id="txtIngresos" placeholder="Ejm. 1234">
+        <input type="number" id="txtIngresos" placeholder="Ejm. 1234" required min="0" step="0.01">
  
         <label for="txtArriendo"><span class="label-icon icon-arriendo"></span> Arriendo:</label>
-        <input type="text" id="txtArriendo" placeholder="Ejm. 500">
+        <input type="number" id="txtArriendo" placeholder="Ejm. 500" required min="0" step="0.01">
 
         <label for="txtAlimentacion"><span class="label-icon icon-alimentacion"></span> Alimentación:</label>
         <input type="text" id="txtAlimentacion" placeholder="Ejm. 300">
@@ -31,13 +31,13 @@
 
         <p>Total Gastos: <span id="spnTotalGastos"></span></p>
         <label for="txtMonto"><span class="label-icon icon-monto"></span> Monto:</label>
-        <input type="text" id="txtMonto" placeholder="Ejm. 1234">
+        <input type="number" id="txtMonto" placeholder="Ejm. 1234" required min="0" step="0.01">
  
         <label for="txtPlazo"><span class="label-icon icon-plazo"></span> Plazo en años:</label>
-        <input type="text" id="txtPlazo" placeholder="Ejm. 5">
+        <input type="number" id="txtPlazo" placeholder="Ejm. 5" required min="1" max="30" step="1">
  
         <label for="txtTasaInteres"><span class="label-icon icon-tasa"></span> Tasa de interés:</label>
-        <input type="text" id="txtTasaInteres" placeholder="Ejm. 10">
+        <input type="number" id="txtTasaInteres" placeholder="Ejm. 10" required min="0" max="100" step="0.01">
  
         <p>Interés a pagar: <span id="spnInteresPagar"></span></p>
         <p>Total préstamo: <span id="spnTotalPrestamo"></span></p>

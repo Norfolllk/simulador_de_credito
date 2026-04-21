@@ -15,9 +15,9 @@ function calcular() {
     mostrarEnSpan("spnCapacidadPago", capacidadPagoMensual.toFixed(2));
 
     //Paso 7 - Mostrar el resultado del credito en pantalla
-    let monto = mostrarEnTxt("txtMonto");
-    let plazo = mostrarEnTxt("txtPlazo");
-    let tasa = mostrarEnTxt("txtTasaInteres");
+    let monto = parseFloat(mostrarEnTxt("txtMonto"));
+    let plazo = parseFloat(mostrarEnTxt("txtPlazo"));
+    let tasa = parseFloat(mostrarEnTxt("txtTasaInteres"));
 
     let interes = calcularInteresSimple(monto, tasa, plazo);
     mostrarEnSpan("spnInteresPagar", interes.toFixed(2));
